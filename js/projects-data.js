@@ -13,7 +13,7 @@ const projectsData = [
         participants: 'Гордеев Илья',
         client: 'Личный проект',
         year: '2024',
-        heroVideo: '/models/video/flask.mkv',
+        heroVideo: 'models/video/flask.mkv',
         briefText: 'Создание модели флакона духов. Данная работа была на выставке форума «СмартДизайн». При разработке модели флакона было решено сделать основной акцент на форме. Благодаря совмещению острых форм и эффекта натянутой пленки достигается динамичность формы. ',
         tzText: 'При разработке модели флакона было решено сделать основной акцент на форме. Благодаря совмещению острых форм и эффекта натянутой пленки достигается динамичность формы.',
         cardModel: 'models/flask/флакон2.glb',
@@ -24,9 +24,9 @@ const projectsData = [
         ],
         software: ['blender', 'photoshop', 'substance'],
         stages: [
-            { software: 'blender', image: '/models/flask/скрины/1.png', description: 'Блокинг формы' },
-            { software: 'photoshop', image: '/models/flask/скрины/3.png', description: 'Детализацтя формы' },
-            { software: 'substance', image: '/models/flask/скрины/2.png', description: 'Текстурирование' },
+            { software: 'blender', image: 'models/flask/скрины/1.png', description: 'Блокинг формы' },
+            { software: 'photoshop', image: 'models/flask/скрины/3.png', description: 'Детализацтя формы' },
+            { software: 'substance', image: 'models/flask/скрины/2.png', description: 'Текстурирование' },
 
         ],
         fallbackType: 'cube'
@@ -38,7 +38,7 @@ const projectsData = [
         participants: 'Автор',
         client: 'Личный проект',
         year: '2024',
-        heroVideo: '/models/video/банка.mkv',
+        heroVideo: 'models/video/банка.mkv',
         briefText: 'Данный объект был разработан в ходе работы на Балтийский берег, использовалась в внутренних презентациях компании, после стала обоснованием необходимости заказа 3д рекламы в крупном рекламном агентстве. ',
         tzText: 'Данная модель повторяет формы и упаковку оригинала, имеет оптимальное количество полигонов, благодаря этому может использоваться как в рекламе, так и в реалистичных рендерах.',
         cardModel: 'models/балт/поза.glb',
@@ -49,9 +49,9 @@ const projectsData = [
         ],
         software: ['blender', 'substance', 'marmoset'],
         stages: [
-            { software: 'blender', image: '/models/балт/скрины/1.png', description: 'Моделирование' },
-            { software: 'substance', image: '/models/балт/скрины/2.png', description: 'Текстурирование' },
-            { software: 'marmoset', image: '/models/балт/скрины/3.png', description: 'Рендер' }
+            { software: 'blender', image: 'models/балт/скрины/1.png', description: 'Моделирование' },
+            { software: 'substance', image: 'models/балт/скрины/2.png', description: 'Текстурирование' },
+            { software: 'marmoset', image: 'models/балт/скрины/3.png', description: 'Рендер' }
         ],
         fallbackType: 'torus'
     },
@@ -62,7 +62,7 @@ const projectsData = [
         participants: 'Автор',
         client: 'Личный проект',
         year: '2026',
-        heroVideo: '/models/video/анимация.mkv',
+        heroVideo: 'models/video/анимация.mkv',
         briefText: 'В ходе выполнения работы была сделана локация с несколькими точками интереса. Данная локация может быть использована для видеоигры, анимации и рендера.',
         tzText: 'Локация создана в стилистике будущего, имеет множество районов, от богатых кварталов с множеством парков и чистотой до подземных районов с порванными проводами и антисанитарией. В ходе анимации дрон пролетает через все районы, показывая контраст между слоями населения.',
         cardModel: 'models/anim/drone.glb',
@@ -87,7 +87,7 @@ const projectsData = [
         participants: 'Автор',
         client: 'Личный проект',
         year: '2026',
-        heroVideo: '/models/video/face.mp4',
+        heroVideo: 'models/video/face.mp4',
         briefText: 'Данная работа была выполнена с целью ознакомления с новым программным обеспечением. Результатом работы является лицо полностью готовое к анимации. Данная модель поддерживает Motion Capture.',
         tzText: 'Модель разрабатывалась в несколько этапов — от блокинга до высокополигонального моделирования и последующей анимации. В процессе работы форма и силуэт неоднократно уточнялись с целью достижения требуемых характеристик лицевых черт.',
         cardModel: 'models/face/face.glb',
@@ -113,7 +113,7 @@ const projectsData = [
         client: 'Личный проект',
         year: '2024',
         // Video paths - replace with your own videos
-        heroVideo: '/models/video/fly.mp4',
+        heroVideo: 'models/video/fly.mp4',
         briefText: 'Данная работа является одной из первых и выполнялась в рамках образовательного процесса.',
         tzText: 'При разработке трехмерной модели был сделан основной упор на топологию. Дизайн модели направлен на минимализм. Модели присущи плавные формы, отсутствие лишних элементов и лаконичность. Сайт дает возможность оценить качество сетки.',
         // 3D model for card preview (on projects page and index page)
@@ -127,8 +127,8 @@ const projectsData = [
         ],
         software: ['blender', 'photoshop'],
         stages: [
-            { software: 'blender', image: '/models/low-poly-character/скрины/1.png', description: 'Блокинг' },
-            { software: 'photoshop', image: '/models/low-poly-character/скрины/2.png', description: 'Ретопология' }
+            { software: 'blender', image: 'models/low-poly-character/скрины/1.png', description: 'Блокинг' },
+            { software: 'photoshop', image: 'models/low-poly-character/скрины/2.png', description: 'Ретопология' }
         ],
         fallbackType: 'sphere'
     }
