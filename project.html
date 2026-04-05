@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект - PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="projects.html" class="nav-link">проекты</a>
+            <a href="about.html" class="nav-link">обо мне</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main project-page">
+        <!-- Fullscreen Hero Video Section -->
+        <section class="project-hero-fullscreen">
+            <div class="hero-video-fullscreen">
+                <video id="hero-video" autoplay loop muted playsinline>
+                    <source src="models/video/fly.mp4" type="video/mp4">
+                        Your browser does not support video.
+                </video>
+
+            </div>
+            
+
+
+            
+            <!-- Navigation Arrows -->
+            <div class="project-nav-overlay">
+                <button class="project-nav-arrow-lg project-nav-prev" id="prev-project" aria-label="Предыдущий проект">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="32" y1="20" x2="8" y2="20"/>
+                        <polyline points="18,10 8,20 18,30"/>
+                    </svg>
+                </button>
+                
+                <h1 class="project-title-overlay" id="project-title">Название</h1>
+                
+                <button class="project-nav-arrow-lg project-nav-next" id="next-project" aria-label="Следующий проект">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="8" y1="20" x2="32" y2="20"/>
+                        <polyline points="22,10 32,20 22,30"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Project Meta Info - in hero section -->
+            <div class="project-meta-hero">
+                <div class="project-meta-item">
+                    <span class="project-meta-label">Участники</span>
+                    <span class="project-meta-value" id="project-participants">-</span>
+                </div>
+                <div class="project-meta-item">
+                    <span class="project-meta-label">Заказчик</span>
+                    <span class="project-meta-value" id="project-client">-</span>
+                </div>
+                <div class="project-meta-item">
+                    <span class="project-meta-label">Год</span>
+                    <span class="project-meta-value" id="project-year">-</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brief Info Section with Side-by-Side Layout -->
+        <section class="project-brief-new">
+            <!-- Left Content -->
+            <div class="brief-content-overlay">
+                <div class="brief-text-section">
+                    <h2 class="brief-title">Краткая информация</h2>
+                    <p class="brief-text" id="brief-text">
+                        Краткая информация о проекте. Описание работы, использованных техник и достигнутых результатов.
+                    </p>
+                </div>
+                
+                <!-- Toggle Buttons -->
+                <div class="brief-buttons">
+                    <button class="btn-toggle btn-toggle-active" id="btn-render">рендер</button>
+                    <button class="btn-toggle" id="btn-topology">Топология</button>
+                </div>
+                
+                <!-- 3D Models Row (small cards) -->
+                <div class="brief-models-row" id="brief-models-row">
+                    <!-- 3D model cards will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Right: Large 3D Model Viewer -->
+            <div class="brief-model-bg" id="main-model-container">
+                <canvas id="main-model-canvas"></canvas>
+            </div>
+        </section>
+
+        <!-- TZ / Stages / Software Section -->
+        <section class="project-tz">
+            <h2 class="tz-title">ТЗ / Этапы работы / ПО</h2>
+            
+            <div class="tz-content">
+                <div class="tz-text-wrapper">
+                    <p class="tz-text" id="tz-text">
+                        Техническое задание проекта. Описание требований, спецификаций и целей работы. 
+                        Подробное описание всех этапов разработки и используемого программного обеспечения.
+                    </p>
+                </div>
+                
+                <div class="tz-stages">
+                    <div class="stage-image-wrapper">
+                        <img src="/placeholder.svg?height=400&width=600" alt="Этап работы" class="stage-image" id="stage-image">
+                    </div>
+                    
+                    <div class="stage-software" id="stage-software">
+                        <!-- Software buttons will be dynamically added -->
+                        <button class="software-btn active" data-software="blender" title="Blender">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </button>
+                        <button class="software-btn" data-software="zbrush" title="ZBrush">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </button>
+                        <button class="software-btn" data-software="substance" title="Substance Painter">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </button>
+                        <button class="software-btn" data-software="maya" title="Maya">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </button>
+                        <button class="software-btn" data-software="marmoset" title="Marmoset">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </button>
+                        <button class="software-btn" data-software="photoshop" title="Photoshop">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </button>
+                        <button class="software-btn" data-software="unity" title="Unity">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </button>
+                        <button class="software-btn" data-software="unreal" title="Unreal Engine">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <p class="stage-description" id="stage-description">
+                        Описание этапа работы. Информация о процессе, используемых инструментах и техниках на данном этапе разработки.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decorative Element -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-contacts">
+                <a href="https://t.me/anemel0" class="footer-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.242-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.12.099.153.231.168.327.015.095.034.311.019.477z"/>
+                    </svg>
+                    <span>Telegram</span>
+                </a>
+                <a href="mailto:email@example.com" class="footer-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M22 7l-10 6L2 7"/>
+                    </svg>
+                    <span>email@example.com</span>
+                </a>
+            </div>
+            <span class="footer-copyright">© 2026</span>
+        </div>
+    </footer>
+
+    <!-- Three.js for 3D models -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="js/model-loader.js"></script>
+    <script src="js/projects-data.js"></script>
+    <script src="js/project-page.js"></script>
+</body>
+</html>
